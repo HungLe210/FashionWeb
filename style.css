@@ -141,6 +141,10 @@ body {
     padding-bottom:15px;
 }
 
+#hero p{
+    font-weight: 600;
+}
+
 #hero h1{
     color:#ff9100
 }
@@ -531,6 +535,7 @@ footer a:hover{
 #page-header h2,
 #page-header p{
     color:#000;
+    font-weight: 600;
 }
 
 #pagination{
@@ -551,14 +556,13 @@ footer a:hover{
     font-weight: 600;
 }
 
+/* Sproduct Page */
 
 #prodetails{
     display: flex;
     margin-top: 20px;
 
 }
-
-
 
 #prodetails .single-pro-image{
     width: 40%;
@@ -614,13 +618,13 @@ footer a:hover{
 
 #prodetails .single-pro-details span{
     line-height: 25px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
 
-/* Single Product */
-
-/* Blog */
+/* Blog page*/
 #page-header.blog-header{
     background-image: url("img/banner/b19.jpg");
 
@@ -699,6 +703,8 @@ footer a:hover{
 #about-head{
     display: flex;
     align-items: center;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 #about-head img{
@@ -725,7 +731,6 @@ footer a:hover{
     height: 100%;
     border-radius: 20px;
 }
-/* Home Page */
 
 /*Cart Page*/
 
@@ -774,7 +779,7 @@ footer a:hover{
 #cart table thead td{
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 18px;
     padding: 18px 0;   
 }
 
@@ -783,7 +788,8 @@ footer a:hover{
 }
 
 #cart table tbody td{
-    font-size: 13px;   
+    font-size: 16px;   
+    font-weight: 600;
 }
 
 #cart-add{
@@ -801,6 +807,7 @@ footer a:hover{
 #coupon h3,
 #subtotal h3{
     padding-bottom: 15px;
+    font-size: 18px;
 }
 #coupon input{
     padding: 10px 20px;
@@ -821,7 +828,9 @@ footer a:hover{
     width: 50%;
     margin-bottom: 30px;
     border: 1px solid #e2e9e1;
-    padding: 30px;   
+    padding: 30px; 
+    font-size: 18px;
+    font-weight: 600;  
 }
 
 #subtotal table{
@@ -835,5 +844,116 @@ footer a:hover{
     border: 1px solid #e2e9e1;
     padding: 10px;
     font-size: 13px;
+}
 
+
+/*Contact Page*/
+
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details.details{
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span{
+    font-size: 20px;
+}
+
+#contact-details .details h2,
+#form-details form  h2{
+    font-size: 46px;
+    line-height: 36px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3{
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button{
+    background-color: #088178;
+    color: #fff;
+}
+
+#form-details .people div{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#form-details .people div img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-details .people div p{
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#form-details .people div p span{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
 }
