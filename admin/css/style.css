@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+.boxcenter{
+    width: 70%;
+    margin: 0 auto;
+}
+.r1{
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.mb{
+    margin-bottom: 10px;
+}
+
+.headeradmin
+{
+    background-color: gray;
+    border: 1px solid black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.headeradmin h1{
+    font-size: 2vw;
+}
+.frmtitle{
+    background-color: rgb(255, 255, 255);
+    border: 1px #CCC solid;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px;
+    margin: 10px;
+}
+.frmtitle h1{
+    font-size: 2vw;
+}
+.frmcontent{
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+nav{
+    border-radius: 5px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.frmdsloai table{
+    width: 100%;
+    border-radius: 2px;
+    border: 1px #999 solid;
+}
+
+.frmdsloai table th:nth-child(1){
+    width: 10%;
+    padding: 20px;
+    background-color: #CCC;
+}
+.frmdsloai table th:nth-child(2){
+    width: 30%;
+    background-color: #CCC;
+}
+.frmdsloai table th:nth-child(3){
+    width: 40%;
+    background-color: #CCC;
+}
+.frmdsloai table th:nth-child(4){
+    width: 20%;
+    background-color: #CCC;
+}
+
+.frmdsloai table td{
+    padding: 10px 20px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #64ff98;
+}

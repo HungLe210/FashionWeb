@@ -8,7 +8,7 @@
 
 
     <section id="about-head" class="section-p1">
-        <img src="img/about/a6.jpg" alt="">
+        <img src="view/img/about/a6.jpg" alt="">
         <div>
             <h2>Who We Are?</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -33,6 +33,6 @@
     <section id="about-app" class="section-p1">
         <h1>Download Our <a href="#">App</a> </h1>
         <div class="video">
-            <video autoplay muted loop src="img/about/1.mp4"></video>
+            <video autoplay muted loop src="view/img/about/1.mp4"></video>
         </div>
     </section>
