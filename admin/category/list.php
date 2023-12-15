@@ -17,7 +17,7 @@
                         {
                             extract($category);
                             $editcate="index.php?act=edcate&id=".$ID;
-                            $delcate="index.php?act=dlcate&id=".$ID;
+                            $delcate="index.php?act=delcate&id=".$ID;
                             echo 
                                 '<tr>
                                     <td><input type="checkbox" name="" id=""></td>
@@ -38,6 +38,6 @@
                 <input type="button" value="Chọn tất cả">
                 <input type="button" value="Bỏ chọn tất cả">
                 <input type="button" value="Xoá các mục đã chọn">
-                <a href="index.php?act=addcate" ><input type="button" value="NHẬP THÊM"></a>
+                <a href="index.php?act=addcate" ><input type="button" value="Nhập Thêm"></a>
             </div>
         </div>

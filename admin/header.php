@@ -17,10 +17,13 @@
         <nav class="navbar mb navbar-expand-sm navbar-dark bg-dark">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?act=addcate">Danh mục</a>
+                    <a class="nav-link" href="index.php">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?act=product">Hàng hóa</a>
+                    <a class="nav-link" href="index.php?act=lscate">Danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?act=lsprod">Hàng hóa</a>
                 </li>    
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?act=product">Khách hàng</a>

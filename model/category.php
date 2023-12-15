@@ -6,7 +6,7 @@ function insert_cate($tenloai){
 }
 
 function delete_cate($id){
-    $sql= "delete from category where id=".$id;
+    $sql= "delete from category where ID=".$id;
     pdo_execute($sql);
 }
 function load_all_cate(){
@@ -15,12 +15,14 @@ function load_all_cate(){
     return $listcate;
 }
 
-function get_one($id){
-    $sql= "select * from category where id=".$id;
+function get_cate($id){
+    $sql= "select * from category where ID=".$id;
     $cate=pdo_query_one($sql);
     return $cate;
 }
-function update_cate($id,$tenloai){}
-function delete_cate_by_id($id){}
+function update_cate($id,$tenloai){
+    $sql="UPDATE category set Name='".$tenloai."' where ID=".$id;
+    pdo_execute($sql);
+}
 
 ?>

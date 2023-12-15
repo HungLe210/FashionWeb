@@ -57,11 +57,12 @@ nav{
     border: 1px #999 solid;
 }
 
-.frmdsloai table th:nth-child(1){
-    width: 10%;
+.frmdsloai table th{
     padding: 20px;
     background-color: #CCC;
 }
+
+/*
 .frmdsloai table th:nth-child(2){
     width: 30%;
     background-color: #CCC;
@@ -73,11 +74,11 @@ nav{
 .frmdsloai table th:nth-child(4){
     width: 20%;
     background-color: #CCC;
-}
+}*/
 
 .frmdsloai table td{
     padding: 10px 20px;
     border-left: 1px solid #999;
     border-right: 1px solid #999;
-    border-bottom: 1px solid #64ff98;
+    border-bottom: 1px solid #999;
 }
