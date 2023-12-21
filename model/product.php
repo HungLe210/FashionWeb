@@ -9,6 +9,21 @@ function delete_prod($id){
     $sql= "delete from product where ID=".$id;
     pdo_execute($sql);
 }
+
+function load_prod_home(){
+    $sql="select * from product where 1 order by id desc limit 0,8";   
+    $listprod=pdo_query($sql);
+    return $listprod;
+}
+function load_catename($IDCate){
+    if($IDCate>0){
+    $sql="select * from category where id=".$IDCate;   
+    $category=pdo_query_one($sql);
+    extract($category);
+    return $Name;
+    }else return"";
+}
+
 function load_all_prod($kyw,$idcate){
     
     $sql="select * from product where 1";

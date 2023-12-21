@@ -88,6 +88,8 @@ body {
     left:0;/* sticky header */
 }
 
+
+
 #navbar{
     display: flex; 
     align-items: center; 
@@ -100,19 +102,66 @@ body {
 }
 #navbar li a {
     text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 145, 0);
+    transition: 0.1s ;
+} /* edit underline of nav header */
+
+#navbar li a:hover,
+#navbar li a.active,
+#navbar li i:hover,
+#navbar li i.active{ 
+    color: rgb(0, 0, 0); 
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content:"";
+    width: 50%;
+    height: 2px;
+    background: rgb(0, 0, 0); 
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#menu{   
+    float:left;
+    width: 25%;
+    padding-top: 5%;
+    margin-right:10px;
+    text-align: center;
+}
+#menu .navbar{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#menu .navbar li{
+    list-style: none; 
+    padding: 20px 20px; 
+    margin: 3px;
+    position: relative;
+    border: 2px solid salmon;
+    border-radius: 5%;
+    min-width: 48%;
+}
+#menu .navbar li a {
+    text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: rgb(255, 145, 0);
     transition: 0.3s ease;
 } /* edit underline of nav header */
 
-#navbar li a:hover,
-#navbar li a.active{ 
+#menu .navbar li a:hover,
+#menu .navbar li a.active{ 
     color: burlywood; 
 }
 
-#navbar li a.active::after,
-#navbar li a:hover::after{
+#menu .navbar li a.active::after,
+#menu .navbar li a:hover::after{
     content:"";
     width: 30%;
     height: 2px;
@@ -120,7 +169,9 @@ body {
     position: absolute;
     bottom: -4px;
     left: 20px;
+    transition: 0.5s;
 }
+
 
 
 /* Home Page */
@@ -242,6 +293,7 @@ body {
 }
 
 #product1 .pro img{
+    min-height: 430px;
     width: 100%;
     border-radius: 20px;
 }
@@ -555,7 +607,15 @@ footer a:hover{
     font-size: 16px;
     font-weight: 600;
 }
+.kyw-input {
+    color: rgb(255, 145, 0);
+    margin: 5px;
+    border: 0;
+    outline:0;
+    font-size: 20px;
+    flex-grow:1;
 
+}
 /* Sproduct Page */
 
 #prodetails{
@@ -956,4 +1016,90 @@ footer a:hover{
     font-size: 20px;
     font-weight: 600;
     color: #000;
+}
+
+
+
+/*----------------------------LogIn-----------------------------------------*/
+
+#wrapper{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-image: url("img/banner/b14.png");
+    background-repeat:  repeat;
+    background-position: 100%;
+    background-color: rgb(58, 58, 58);
+}
+
+
+#form-login{
+    max-width: 30%;
+    background: rgba(255, 255, 255, 0.75);
+    flex-grow:1;
+    box-shadow: 0px 0px 17px 2px rgba(148, 135, 135, 0.8);
+}
+
+.form-heading{
+    color: rgb(255, 145, 0);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group{
+    border-bottom: 1px solid rgb(255, 145, 0);
+    margin-top: 25px;
+    
+    display:flex;
+}
+.form-group i{
+    color: rgb(255, 145, 0);
+    padding: 5px;
+}
+#eye{
+    cursor:pointer;
+}
+
+
+.form-input{
+    background:transparent;
+    border: 0;
+    outline:0;
+    color: rgb(255, 145, 0);
+    font-size: 20px;
+    flex-grow:1;
+}
+
+.form-input::placeholder{
+    color: rgb(255, 145, 0);
+}
+.form-func{
+    display: flex;
+    justify-content: space-between;
+}
+.form-func h4{
+    font-size: smaller;
+    color: rgb(255, 145, 0);
+    padding: 10px;
+}
+.form-func a{
+    text-decoration: none;
+}
+
+
+.form-submit{
+    background:rgb(255, 145, 0);;
+    border: 1px solid rgb(255, 145, 0);
+    color: #f5f5f5;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 3 0px;
+}
+
+.form-submit:hover{
+    box-shadow: 0px 0px 17px 5px rgb(255, 255, 255);
 }

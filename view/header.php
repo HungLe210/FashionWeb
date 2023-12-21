@@ -15,13 +15,14 @@
    
     
     <section id="header">
-        <a href="#"><img src="view/img/logo.png" class="logo" alt=""></a>
+        <a href="index.php?act=home"><img src="view/img/logo.png" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a class="acitve" href="">Home</a></li>
+                <li><a href="index.php?act=home">Home</a></li>
                 <li><a href="index.php?act=shop">Shop</a></li>
                 <li><a href="index.php?act=about">About</a></li>
                 <li><a href="index.php?act=contact">Contact</a></li>
+                <li><a href="index.php?act=login">Account</a></li>
                 <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>

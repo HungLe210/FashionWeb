@@ -14,6 +14,11 @@ function load_all_cate(){
     $listcate= pdo_query($sql);
     return $listcate;
 }
+function get_new_cate(){
+    $sql="select * from product where 1 order by id desc limit 1";   
+    $newcate=pdo_query($sql);
+    return $newcate;
+}
 
 function get_cate($id){
     $sql= "select * from category where ID=".$id;

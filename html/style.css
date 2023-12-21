@@ -121,6 +121,51 @@ body {
     bottom: -4px;
     left: 20px;
 }
+#menu{   
+    float: left; 
+    width: 20%;
+    align-items: left;
+    padding-top: 5%;
+    
+}
+#menu .navbar{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#menu .navbar li{
+    list-style: none; 
+    padding: 20px 20px; 
+    margin: 3px;
+    position: relative;
+    border: 2px solid salmon;
+    border-radius: 5%;
+    max-width: 50%;
+}
+#menu .navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 145, 0);
+    transition: 0.3s ease;
+} /* edit underline of nav header */
+
+.navbar li a:hover,
+.navbar li a.active{ 
+    color: burlywood; 
+}
+
+.navbar li a.active::after,
+.navbar li a:hover::after{
+    content:"";
+    width: 30%;
+    height: 2px;
+    background: burlywood;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
 
 
 /* Home Page */
@@ -242,6 +287,7 @@ body {
 }
 
 #product1 .pro img{
+    min-height: 222px;
     width: 100%;
     border-radius: 20px;
 }
@@ -956,4 +1002,73 @@ footer a:hover{
     font-size: 20px;
     font-weight: 600;
     color: #000;
+}
+
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-image: url("img/banner/b14.png");
+    background-repeat:  repeat;
+    background-position: 20% 30%;
+    background-color: #4c4e52;
+}
+
+
+#form-login{
+    max-width: 500px;
+    background: rgba(255, 153, 0, 0.63);
+    flex-grow:1;
+    box-shadow: 0px 0px 17px 2px rgba(148, 135, 135, 0.8);
+}
+
+.form-heading{
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group{
+    border-bottom: 1px solid #fff;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display:flex;
+}
+.form-group i{
+    color: #fff;
+    padding: 5px;
+}
+#eye{
+    cursor:pointer;
+}
+
+
+.form-input{
+    background:transparent;
+    border: 0;
+    outline:0;
+    color: #f5f5f5;
+    font-size: 20px;
+    flex-grow:1;
+}
+
+.form-input::placeholder{
+    color: #f5f5f5;
+}
+
+.form-submit{
+    background:transparent;
+    border: 1px solid #f5f5f5;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 3 0px;
+}
+
+.form-submit:hover{
+    box-shadow: 0px 0px 17px 5px rgb(255, 255, 255);
 }
