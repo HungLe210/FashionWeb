@@ -26,7 +26,7 @@
                     <a class="nav-link" href="index.php?act=lsprod">Hàng hóa</a>
                 </li>    
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?act=product">Khách hàng</a>
+                    <a class="nav-link" href="index.php?act=lsacc">Khách hàng</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?act=product">Thống kê</a>

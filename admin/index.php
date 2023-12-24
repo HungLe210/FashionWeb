@@ -3,6 +3,7 @@
     include "../model/pdo.php";
     include "../model/category.php";
     include "../model/product.php";
+    include "../model/account.php";
 
     if(isset($_GET["act"])){
         $act=$_GET["act"];
@@ -136,7 +137,14 @@
                 $listprod= load_all_prod("",0);
                 include'product/list.php';
                 break;
+            
+            /* Admin Controller*/
 
+            case 'lsacc':
+                    $listacc=load_all_acc();                    
+                    include 'account/list.php';
+                    break;
+    
             
             default:
                 include 'home.php';

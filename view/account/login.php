@@ -1,25 +1,59 @@
 <section id="wrapper">
-        <form action="index.php?act=login" method="post" id="form-login" class="section-p1">
-            <h1 class="form-heading">Form Đăng nhập</h1>
+    <form action="index.php?act=login" method="post" id="form-login" class="section-p1">
+    <?php
+        if(isset($_SESSION['user'])){
+            extract($_SESSION['user']);
+    ?>
+        <h1 class="form-heading">Account Settings</h1>
+            
+                <h2 class="form-heading">Hi, <?=$User?></h2>           
+           
+            <div class="form-func new-func">
+                <a href="index.php?act=updtacc"><h3>Update Account</h3></a>
+                <a href="index.php?act=fgpw"><h3>Forgot Password? </h3></a>
+                <?php 
+                    if($Role==1){
+                ?>              
+                    <a href="admin/index.php"><h3>Log In Admin </h3></a>
+                <?php
+                    }
+                ?>
+                <a href="index.php?act=logout"><h3>Log Out </h3></a>
+            </div>
+    <?php
+        }else{
+    ?>
+        
+            <h1 class="form-heading">Log In</h1>
             <div class="form-group">
                 <i class="fas fa-user"></i>
-                <input type="text" class="form-input" name="user" placeholder="Tên Đăng Nhập">
+                <input type="text" class="form-input" name="user" placeholder="Username">
             </div>
             <div class="form-group">
                 <i class="fas fa-key"></i>
-                <input type="password" class="form-input" name="pass" placeholder="Mật khẩu">
+                <input type="password" class="form-input" name="pass" placeholder="Password">
                 <div id="eye">
                     <i class="far fa-eye"></i>
                 </div>
             </div>
             <div class="form-func">
                 <a href="index.php?act=regi"><h4>Register </h4></a>
-                <a href="index.php?act=fgpw"><h4>Forgot Password? </h4></a></div>
+                <a href="index.php?act=fgpw"><h4>Forgot Password? </h4></a>
+            </div>
+            <h3><?php
+                if(isset($thongbao)&& ($thongbao!="")){
+                    echo $thongbao;
+                }
             
+                ?>
+            </h3>  
             
-            <input type="submit" value="Đăng Nhập" name="login" class="form-submit">
-            
-        </form>
+            <input type="submit" value="Log In" name="login" class="form-submit">            
+        
+    <?php
+        }
+    ?>
+    </form>
     </section>
 
 

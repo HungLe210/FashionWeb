@@ -14,7 +14,7 @@
                                 <span>'.$CateName.'</span>
                                 <h5>'.$Name.'</h5>
                                 <div class="star">
-                                    <i class="fas fa-star   "></i>
+                                    <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -22,7 +22,7 @@
                                 </div>
                                 <h4>'.$Price.'</h4>
                             </div>
-                            <a href="#"><i class ="fas fa-shopping-cart cart"></i></a>
+                            <a href="'.$linkprod.'".$ID><i class="fas fa-shopping-cart cart"></i></a>
                         </div>';
     }        
 ?>
