@@ -23,7 +23,7 @@
                 <li><a href="index.php?act=about">About</a></li>
                 <li><a href="index.php?act=contact">Contact</a></li>
                 <li><a href="index.php?act=login">Account</a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="index.php?act=cart"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
     </section>

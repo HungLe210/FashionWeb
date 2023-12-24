@@ -3,6 +3,7 @@
             extract($prod);
             $hinh=$Imgpath.$Img;
             $CateName=load_catename($IDCate);
+            $linkprod="index.php?act=product&idprod=".$ID;
             echo'<div class="single-pro-image">
                     <img src="'.$hinh.'" width="100%" id="MainImg" alt="">
                     <div class="small-img-group">
@@ -33,8 +34,17 @@
                         <option>M</option>
                         <option>S</option>
                     </select>
-                    <input type="number" value="1">
-                    <button class="normal">Add To Cart</button>
+                   
+                    <form action="index.php?act=addtocart" method="post">
+                        <input type="number" name="num" value="1"><br>
+                        <input type="hidden" name="id" value ="'.$ID.'">
+                        <input type="hidden" name="name" value ="'.$Name.'">
+                        <input type="hidden" name="img" value ="'.$Img.'">
+                        <input type="hidden" name="price" value ="'.$Price.'"><br>
+                     
+                        
+                        <button type="submit" name="atc" class="normal">Add To Cart</button>
+                    </form>
                     <h4>Product Details</h4>
                     <span>'.$Descrp.'</span>
 
