@@ -37,8 +37,8 @@
         <h2>Feature Products</h2>
         <p>New Morden Collections</p>
         <div class="pro-container">
-            <?php
-                foreach($newprod as $product) {
+            <?php                
+                foreach($listnewcate as $product) {
                     RenderProduct( $product );
                 }
             ?>

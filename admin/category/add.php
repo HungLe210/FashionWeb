@@ -10,11 +10,10 @@
                     </div>
                     <div class ="r1 mb">
                         Tên loại<br>
-                        <input type="text" name ="tenloai">
+                        <input type="text" name ="tenloai" required>
                     </div>
                     <div class="r1 mb">
                         <input type="submit" name="add" value="Thêm Mới">
-                        <input type="reset" value="Nhập Lại">
                         <a href="index.php?act=lscate" ><input type="button" value="Danh Sách"></a>
                     </div>
                     <?php

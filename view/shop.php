@@ -1,10 +1,3 @@
-<section id="page-header">
-       
-       <h2>#stayhome</h2>
-       <p>Save more with coupons & up to 70% off</p>
-       
-   </section>
-
    <section id="shop" class="section-p1">
         <div id="menu">
             <form action="index.php?act=shop" method="post">
@@ -34,8 +27,8 @@
    </section>
    
    
-   <section id="pagination" class="section-p1">
+   <!-- <section id="pagination" class="section-p1">
        <a href="#">1</a>
        <a href="#">2</a>
        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
-   </section>
+   </section> -->

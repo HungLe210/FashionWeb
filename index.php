@@ -4,24 +4,30 @@
     include "model/product.php";
     include "model/category.php";
     include "model/account.php";
+    include "model/cart.php";
+
     include "view/header.php";
+
     include "global.php";
 
     if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
 
     $newprod=load_prod_home();
     $listcate=load_all_cate();
+    
+
 
     if((isset($_GET['act']) && $_GET['act'] != "")){
         $act=$_GET['act'];
         switch ($act) {
 
             case 'shop':
-                if(isset($_GET['kyw']) && $_GET['kyw'] >0){
-                    $kyw=$_GET['kyw'];
-
+                if(isset($_POST['find'])){
+                    if (!empty($_POST['kyw'])) 
+                        $kyw=$_POST['kyw'];
+                    else $kyw='';
                 }else{
-                    $kyw="";
+                    $kyw='';
                 }
                 if(isset($_GET['idcate']) && $_GET['idcate'] >0){
                     $idcate=$_GET['idcate'];                    
@@ -32,7 +38,6 @@
                 $CateName=load_catename($idcate);
                 include "view/shop.php";
                 break; 
-
             case 'about':
                 include "view/about.php";
                 break;
@@ -87,16 +92,19 @@
                     $Email=$_POST['email'];
                     $User=$_POST['user'];
                     $Pass=$_POST['pass'];
-                    insert_acc($Email,$User,$Pass);
-                    $thongbao="Register successfull. Please log in again!";
+                    $check=check_duplicate($User,$Email);
+                    if(is_array($check)){
+                        $thongbao="Username or Email has been used! Please try another.";
+                    }else {insert_acc($Email,$User,$Pass);
+                    $thongbao="Register successfull. Please log in again!";}    
                 }
                 include "view/account/registry.php";
                 break;
             case 'fgpw':
                 if(isset($_POST['send']) &&($_POST['send'])){
-                    $Email=$_POST['email'];
-                    
-                    $checkemail=check_email($Email);
+                    $User=$_POST['user'];
+                    $Email=$_POST['email'];                    
+                    $checkemail=check_email($User,$Email);
                     if(is_array($checkemail)){
                         $thongbao="Your password is: ".$checkemail['Pass'];
                     }
@@ -121,35 +129,82 @@
                     $Price=$_POST['price'];
                     $Quantity=$_POST['num'];
                     $Total= $Quantity * $Price;
-                    $prodadd=[$ID,$Name,$Img,$Price,$Quantity,$Total];
 
-                    array_push($_SESSION['mycart'],$prodadd);
-            
+                    $fl=0; //kiem tra sp co trung trong gio hang khong?
+
+                    for ($i=0; $i < sizeof($_SESSION['mycart']); $i++) { 
+                        
+                        if($_SESSION['mycart'][$i][1]==$Name){
+                            var_dump($_SESSION['mycart']);
+                            $fl=1;
+                            $NewQtt=$Quantity+$_SESSION['mycart'][$i][4];
+                            $_SESSION['mycart'][$i][4]=$NewQtt;
+                            $_SESSION['mycart'][$i][5]= $NewQtt* $Price;
+                            break;
+                        }                        
+                    }
+                    //neu khong trung sp trong gio hang thi them moi
+                    if($fl==0){
+                        $prodadd=[$ID,$Name,$Img,$Price,$Quantity,$Total];
+                        array_push($_SESSION['mycart'],$prodadd);
+                    }               
                 }
                 
-                include "view/cart.php";
+                header('Location: index.php?act=cart');
                 break;
             case 'cart':
                 include "view/cart.php";
                 break;
             case 'delcart':
                 if(isset($_GET['idcart'])){
-                    $_SESSION['mycart']=array_slice($_SESSION['mycart'],$_GET['idcart'],1);                
+                    array_splice($_SESSION['mycart'],$_GET['idcart'],1);       
                 } else{
                     $_SESSION['mycart']=[];
-                }
-                header('Location: index.php?act=cart');                
+                }         
+                header('Location: index.php?act=cart');    
                 break;
+            case 'bill':
+                if(isset($_POST['confirm'])){
+                    if(sizeof($_SESSION['mycart'])>=1)
+                    {
+                        $IDUser=$_SESSION['user']['ID'];
+                        $Name=$_POST['name'];
+                        $Email=$_POST['email'];
+                        $Address=$_POST['address'];
+                        $Tel=$_POST['tel'];
+                        $Method=0;
+                        $Status=0;
+                        $ConfirmDate=date('h:i:sa d/m/Y');
+                        $Total=$_POST['totalbill'];
+                    
+                        $IDBill=insert_bill($IDUser,$Name,$Address,$Tel,$Email,$Total,$ConfirmDate,$Method,$Status);
+                        foreach($_SESSION['mycart'] as $cart){
+                            insert_cart($cart[0],$cart[1],$cart[2],$cart[3],$cart[4],$cart[5],$IDBill);
+                        }if($IDBill>0){
+                            $bill=get_bill($IDBill);
+                            $billdt=load_all_cart($IDBill);}
+                        include "view/cart/bill.php";  
+                        $_SESSION['mycart']=[];
+                    } else include "view/cart.php";
+                }                           
+                
+                break;
+            case 'lsbill':
+                $listbill=load_all_bill('',$_SESSION['user']['ID']);
+                include "view/cart/listbill.php";
+                break;
+            
                 
             default:
+                $newcate=get_new_cate();
+                $listnewcate=load_all_prod("",$newcate['ID']); 
                 include "view/home.php";
                 break;
         }    
     } else {
+        $newcate=get_new_cate();
+        $listnewcate=load_all_prod("",$newcate['ID']); 
         include "view/home.php";
-    }
-        
-
-    
+    }   
     include "view/footer.php";   
 ?>

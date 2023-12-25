@@ -1,7 +1,11 @@
 <section id="wrapper">
         <form action="index.php?act=fgpw" method="post" id="form-login" class="section-p1">
-            <h1 class="form-heading">Forget Password?</h1>
+            <h1 class="form-heading">Forgot Password?</h1>
             <h2>Type your email used for creating account</h2>
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <input type="text" class="form-input" name="user" placeholder="Username">
+            </div> 
             <div class="form-group">
                 <i class="fas fa-at"></i>
                 <input type="text" class="form-input" name="email" placeholder="Email">

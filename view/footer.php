@@ -29,17 +29,17 @@
 
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
+            <a href="index.php?act=about">About Us</a>
             <a href="#">Delivery Information</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
-            <a href="#">Contact Us</a>
+            <a href="index.php?act=contact">Contact Us</a>
         </div>
 
         <div class="col">
             <h4>My Account</h4>
-            <a href="#">Sign In</a>
-            <a href="#">View Cart</a>
+            <a href="index.php?act=login">Sign In</a>
+            <a href="index.php?act=cart">View Cart</a>
             <a href="#">My Wishlist</a>
             <a href="#">Track My Order</a>
             <a href="#">Help</a>
@@ -58,6 +58,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="view/script.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+        
 }
 .boxcenter{
     width: 70%;
@@ -62,11 +63,8 @@ nav{
     background-color: #CCC;
 }
 
+
 /*
-.frmdsloai table th:nth-child(2){
-    width: 30%;
-    background-color: #CCC;
-}
 .frmdsloai table th:nth-child(3){
     width: 40%;
     background-color: #CCC;

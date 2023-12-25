@@ -21,29 +21,31 @@
                     </div>
                     <div class ="r1 mb">
                         Tên sản phẩm<br>
-                        <input type="text" name ="tensp">
+                        <input type="text" name ="tensp" required>
                     </div>
                     <div class ="r1 mb">
-                        Giá sản phẩm<br>
-                        <input type="text" name ="giasp">
+                        Giá sản phẩm ($)<br>
+                        <input type="text" name ="giasp" >
                     </div>
                     <div class ="r1 mb">
                         Hình<br>
                         <input type="file" name ="hinh">
                     </div>
-                    <div class ="r1 mb">
+                    
                         Mô tả<br>
-                        <textarea name="mota" id="" cols="30" row="10"></textarea>
-                    </div>
+                        <textarea name="mota" id="editor1" cols="30" row="10"></textarea>
                     
                     <div class="r1 mb">
                         <input type="submit" name="add" value="Thêm Mới">
-                        <input type="reset" value="Nhập Lại">
                         <a href="index.php?act=lsprod" ><input type="button" value="Danh Sách"></a>
                     </div>
                     <?php
                         if(isset($thongbao) && ($thongbao!="")) echo $thongbao;
                     ?>
+                    <script>
+                        CKEDITOR.replace('editor1');
+                    </script>
                 </form>
             </div>
         </div>
+        

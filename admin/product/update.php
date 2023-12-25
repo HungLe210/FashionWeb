@@ -32,11 +32,11 @@
                     </div>
                     <div class ="r1 mb">
                         Tên sản phẩm<br>
-                        <input type="text" name ="tensp" value="<?=$prod['Name']?>">
+                        <input type="text" name ="tensp" value="<?=$prod['Name']?>" required>
                     </div>
                     <div class ="r1 mb">
-                        Giá sản phẩm<br>
-                        <input type="text" name ="giasp" value="<?=$Price?>">
+                        Giá sản phẩm ($)<br>
+                        <input type="text" name ="giasp" value="<?=$Price?>">$
                     </div>
                     <div class ="r1 mb">
                         Hình<br>
@@ -51,7 +51,6 @@
                     <div class="r1 mb">
                         <input type="hidden" name="id" value="<?=$prod['ID']?>">
                         <input type="submit" name="updt" value="Cập Nhật">
-                        <input type="reset" value="Nhập Lại">
                         <a href="index.php?act=lsprod" ><input type="button" value="Danh Sách"></a>
                     </div>
                     <?php

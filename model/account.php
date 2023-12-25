@@ -8,8 +8,14 @@
         $acc=pdo_query_one($sql);
         return $acc;
     }
-    function check_email($Email){
-        $sql= "select * from account where Email='".$Email."'";
+
+    function check_duplicate($User,$Email){
+        $sql="select * from account where User='".$User."' OR Email='".$Email."'";
+        $check=pdo_query_one($sql);
+        return $check;        
+    }
+    function check_email($User,$Email){
+        $sql= "select * from account where User='".$User."' AND Email='".$Email."'";
         $rs=pdo_query_one($sql);
         return $rs;
     }

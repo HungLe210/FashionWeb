@@ -4,6 +4,8 @@
     include "../model/category.php";
     include "../model/product.php";
     include "../model/account.php";
+    include "../model/cart.php";
+    include "condition.php";
 
     if(isset($_GET["act"])){
         $act=$_GET["act"];
@@ -144,7 +146,21 @@
                     $listacc=load_all_acc();                    
                     include 'account/list.php';
                     break;
-    
+            case 'listbill':
+                    if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                        $kyw=$_POST['kyw'];
+                    }else { $kyw="";}
+                    $listbill=load_all_bill($kyw,0);
+                    include "bill/list.php";
+                    break;   
+            case 'delbill':
+                if(($_GET['id']) && ($_GET['id']>0)){
+                    delete_bill($_GET['id']);
+                }
+                $listprod= load_all_prod("",0);
+                include'product/list.php';
+                break;
+                    
             
             default:
                 include 'home.php';

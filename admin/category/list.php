@@ -7,7 +7,6 @@
             <div class ="r1 mb frmdsloai">
                 <table>
                     <tr>
-                        <th></th>
                         <th>MÃ LOẠI</th>
                         <th>TÊN LOẠI</th>
                         <th></th>
@@ -20,7 +19,6 @@
                             $delcate="index.php?act=delcate&id=".$ID;
                             echo 
                                 '<tr>
-                                    <td><input type="checkbox" name="" id=""></td>
                                     <td>'.$ID.'</td>
                                     <td>'.$Name.'</td>
                                     <td><a href="'.$editcate.'"><input type="button" value="Sửa"></a> <a href="'.$delcate.'"><input type="button" value="Xóa"></a></td>
@@ -35,9 +33,6 @@
                 
             </div>
             <div class="r1 mb">
-                <input type="button" value="Chọn tất cả">
-                <input type="button" value="Bỏ chọn tất cả">
-                <input type="button" value="Xoá các mục đã chọn">
                 <a href="index.php?act=addcate" ><input type="button" value="Nhập Thêm"></a>
             </div>
         </div>

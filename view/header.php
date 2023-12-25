@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
 
     <link rel="stylesheet" href="view/style.css">
+
 </head>
 <body>
 
@@ -24,6 +25,11 @@
                 <li><a href="index.php?act=contact">Contact</a></li>
                 <li><a href="index.php?act=login">Account</a></li>
                 <li><a href="index.php?act=cart"><i class="fas fa-shopping-cart"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
+        </div>
+        <div id="mobile">
+            <a href="index.php?act=cart"><i class="fas fa-shopping-cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>

@@ -15,8 +15,8 @@ function load_all_cate(){
     return $listcate;
 }
 function get_new_cate(){
-    $sql="select * from product where 1 order by id desc limit 1";   
-    $newcate=pdo_query($sql);
+    $sql="select * from category where 1 order by id desc limit 1";   
+    $newcate=pdo_query_one($sql);
     return $newcate;
 }
 
@@ -25,9 +25,11 @@ function get_cate($id){
     $cate=pdo_query_one($sql);
     return $cate;
 }
+
+
+
 function update_cate($id,$tenloai){
     $sql="UPDATE category set Name='".$tenloai."' where ID=".$id;
     pdo_execute($sql);
 }
-
 ?>

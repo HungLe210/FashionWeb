@@ -18,6 +18,7 @@
                 <?php
                     }
                 ?>
+                <a href="index.php?act=lsbill"><h3>Track My Order</h3></a>
                 <a href="index.php?act=logout"><h3>Log Out </h3></a>
             </div>
     <?php
@@ -27,11 +28,11 @@
             <h1 class="form-heading">Log In</h1>
             <div class="form-group">
                 <i class="fas fa-user"></i>
-                <input type="text" class="form-input" name="user" placeholder="Username">
+                <input type="text" class="form-input" name="user" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <i class="fas fa-key"></i>
-                <input type="password" class="form-input" name="pass" placeholder="Password">
+                <input type="password" class="form-input" name="pass" placeholder="Password" required>
                 <div id="eye">
                     <i class="far fa-eye"></i>
                 </div>
@@ -44,7 +45,6 @@
                 if(isset($thongbao)&& ($thongbao!="")){
                     echo $thongbao;
                 }
-            
                 ?>
             </h3>  
             

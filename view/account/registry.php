@@ -4,18 +4,18 @@
             
             <div class="form-group">
                 <i class="fas fa-user"></i>
-                <input type="text" class="form-input" name="user" placeholder="Username">
+                <input type="text" class="form-input" name="user" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <i class="fas fa-key"></i>
-                <input type="password" class="form-input" name="pass" placeholder="Password">
+                <input type="password" class="form-input" name="pass" placeholder="Password" required>
                 <div id="eye">
                     <i class="far fa-eye"></i>
                 </div>
             </div>       
             <div class="form-group">
                 <i class="fas fa-user"></i>
-                <input type="email" class="form-input" name="email" placeholder="Email">
+                <input type="email" class="form-input" name="email" placeholder="Email" required>
             </div>
            
             <div class="form-func">
@@ -25,7 +25,7 @@
             <input type="submit" value="Register" name="regi" class="form-submit"> 
             <h2><?php
         if(isset($thongbao)&& ($thongbao!="")){
-            echo $thongbao;
+           echo $thongbao;
         }
     
     ?>

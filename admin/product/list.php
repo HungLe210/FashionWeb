@@ -23,7 +23,6 @@
         
                 <table>
                     <tr>
-                        <th></th>
                         <th>MÃ LOẠI</th>
                         <th>TÊN SẢN PHẨM</th>                        
                         <th>HÌNH</th>
@@ -41,15 +40,14 @@
                                 $hinh="<img src='".$imgpath."' height ='80'>";
                             }
                             else{
-                                $hinh= "no photo";
+                                $hinh= "No photo";
                             }
                             echo 
                                 '<tr>
-                                    <td><input type="checkbox" name="" id=""></td>
                                     <td>'.$ID.'</td>
                                     <td>'.$Name.'</td>
                                     <td>'.$hinh.'</td>
-                                    <td>'.$Price.'</td>
+                                    <td>'.$Price.'$</td>
                                     <td><a href="'.$editprod.'"><input type="button" value="Sửa"></a> <a href="'.$delprod.'"><input type="button" value="Xóa"></a></td>
                                 </tr>';
                         }
@@ -62,9 +60,6 @@
                 
             </div>
             <div class="r1 mb">
-                <input type="button" value="Chọn tất cả">
-                <input type="button" value="Bỏ chọn tất cả">
-                <input type="button" value="Xoá các mục đã chọn">
                 <a href="index.php?act=addprod" ><input type="button" value="Nhập Thêm"></a>
             </div>
         </div>
