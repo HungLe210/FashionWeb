@@ -11,6 +11,10 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Check user conditions: 1. Log In -> 2. Information of Telephone and Address? 
+                If exist:    Export CART data, including: Detail Products and Delete Function for each product
+                else: Notify the conditions to user
+            -->
                 <?php
                     if(isset($thongbao)&& ($thongbao!="")){
                         echo $thongbao;
@@ -49,6 +53,7 @@
                         echo'<h1>Not have enough information. Please update your address/telephone on Account</h1>';
                     }else{
                         
+                    //    Post data to confirm bill
                         echo'
                     <form action="index.php?act=bill" method="post">    
                         <h3>Order Information</h3>
@@ -86,9 +91,14 @@
                             <td>'.$totalbill.'</td>
                         </tr>
                         </table>
+                        
                         <a href="index.php?act=bill"><button type="submit" class="normal" name="confirm">Proceed to checkout</button></a>
                         <a href="index.php?act=delcart"><button class="normal">Delete cart</button></a>
-                    </form>    ';
+                    </form>    
+                    <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="view/momopayment.php">
+                        <input type="hidden" name="totalbill" value="'.$totalbill.'">   
+                        <input type="submit" name="momo" value ="MOMO QRCode Payment">
+                    </form>';
                     } 
                 }else echo'<h1>Have to log in to use this function</h1>';
                

@@ -163,6 +163,8 @@
                 }         
                 header('Location: index.php?act=cart');    
                 break;
+
+             /*--------------------- Bill------------------------*/
             case 'bill':
                 if(isset($_POST['confirm'])){
                     if(sizeof($_SESSION['mycart'])>=1)
@@ -193,8 +195,7 @@
                 $listbill=load_all_bill('',$_SESSION['user']['ID']);
                 include "view/cart/listbill.php";
                 break;
-            
-                
+           
             default:
                 $newcate=get_new_cate();
                 $listnewcate=load_all_prod("",$newcate['ID']); 

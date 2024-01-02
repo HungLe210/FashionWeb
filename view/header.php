@@ -23,7 +23,13 @@
                 <li><a href="index.php?act=shop">Shop</a></li>
                 <li><a href="index.php?act=about">About</a></li>
                 <li><a href="index.php?act=contact">Contact</a></li>
-                <li><a href="index.php?act=login">Account</a></li>
+                <?php           
+                    if (isset($_SESSION['user']))
+                        echo '<li><a href="index.php?act=login">Hi, '.$_SESSION['user']['User'].'</a></li>';  
+                    else 
+                    echo '<li><a href="index.php?act=login">Account</a></li>';  
+                ?>
+                
                 <li><a href="index.php?act=cart"><i class="fas fa-shopping-cart"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
