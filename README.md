@@ -12,8 +12,16 @@ Goal: Develop a minimalist, responsive fashion website with features like produc
 
 # Technology
 
-Front-end: HTML, CSS, Javascript
-Back-end: PHP
+Front-end: HTML, CSS, Javascript  Back-end: PHP
+
+#Features:
+
+Minimalist Design: Clean layout focusing on fashion products.
+Responsive: Optimized for various devices.
+Product Showcase: Visually appealing display with product details.
+Navigation: Intuitive browsing across categories.
+Search & Checkout: Seamless user experience with search functionality and secure checkout.
+Contact Form: Easy communication for users.
 
 
 
