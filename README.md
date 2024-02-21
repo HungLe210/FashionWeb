@@ -11,9 +11,8 @@ Motivation: Aim to merge creative design with technical expertise, offering hand
 Goal: Develop a minimalist, responsive fashion website with features like product showcasing, search, secure checkout, and contact forms to showcase full-stack development skills.
 
 # Technology
-
-Front-end: HTML, CSS, Javascript <space><space>
-Back-end: PHP <space><space>
+|Front-End|Back-End|
+|HTML, CSS, Javascript| PHP|
 
 
 # Features:
