@@ -12,6 +12,7 @@ Goal: Develop a minimalist, responsive fashion website with features like produc
 
 # Technology
 |Front-End|Back-End|
+|-|-|
 |HTML, CSS, Javascript| PHP|
 
 
